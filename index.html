@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
     <title>VMN Account</title>  
 
     <style>
+      :root {
+        --primary-color: #17509e;
+      }
+
       *,
       *::before,
       *::after {
@@ -28,9 +36,13 @@
       body {
         background: url(https://thijsw.github.io/b2c/bg.png) no-repeat center center fixed;
         background-size: cover;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
       }
 
+      a {
+        color: var(--primary-color);
+      }
+      
       #wrapper {
         align-items: center;
         display: flex;
@@ -60,9 +72,16 @@
       .buttons {
         margin-top: 3rem;
       }
-      
+
       h2 {
         font-size: 2.4rem
+      }
+
+      #forgotPassword {
+        display: block;
+        font-size: 1.4rem;
+        margin-top: 3rem;
+        text-align: center;
       }
     </style>
   </head>
