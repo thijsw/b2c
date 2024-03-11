@@ -28,11 +28,19 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       }
 
+      #wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+      }
+      
       #panel {
         background: #fff;
         border-radius: .5rem;
-        margin: 20rem auto;
-        max-width: 40rem;
+        margin: auto;
+        max-width: 52rem;
         padding: 4rem;
       }
 
@@ -43,8 +51,10 @@
   </head>
 
   <body>
-    <div id="panel">
-      <div id="api" role="main"></div>
+    <div id="wrapper">
+      <div id="panel">
+        <div id="api" role="main"></div>
+      </div>
     </div>
   </body>
 </html>
