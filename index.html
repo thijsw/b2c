@@ -12,14 +12,17 @@
       }
 
       html {
-        box-sizing: border-box;
         font-size: 62.5%;
-        height: 100%;
         -ms-text-size-adjust: none;
         -webkit-text-size-adjust: none;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
+      }
+
+      html,
+      body {
+        height: 100%;
       }
 
       body {
@@ -44,6 +47,20 @@
         padding: 4rem;
       }
 
+      .entry-item {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      .entry-item label {
+        display: none;
+      }
+
+      .buttons {
+        margin-top: 3rem;
+      }
+      
       h2 {
         font-size: 2.4rem
       }
