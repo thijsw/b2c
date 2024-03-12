@@ -127,9 +127,10 @@
       }
 
       #localAccountForm .buttons {
-        margin-top: 1.5rem;
+        margin-top: 0.75rem;
       }
 
+      #attributeVerification #attributeList .buttons button,
       button[form=localAccountForm] {
         align-items: center;
         background: var(--dark-color);
@@ -153,6 +154,42 @@
         font-size: 1.6rem;
         margin-top: 3rem;
         text-align: center;
+      }
+
+      #attributeVerification ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      #attributeVerification > .buttons {
+        display: flex;
+      }
+
+      #attributeVerification > .buttons #continue {
+        display: none;
+      }
+
+      #attributeVerification > .buttons #cancel {
+        all: unset;
+        text-decoration: underline;
+        margin: 0 auto;
+        cursor: pointer;
+        font-family: Merriweather, serif;
+        font-size: 1.6rem;
+      }
+
+      #attributeVerification #attributeList + .buttons {
+        margin-top: 2.5rem;
+      }
+      
+      #attributeVerification .attrEntry .verificationControlContent .buttons {
+        margin-top: 0.75rem;
+      }
+
+      #api > .intro,
+      #attributeVerification .attrEntry label,
+      #attributeVerification a.helpLink {
+        display: none;
       }
     </style>
   </head>
