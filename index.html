@@ -93,10 +93,6 @@
         max-height: 5rem;
         width: 16rem;
       }
-    
-      #panel #logo.hidden {
-        display: none;
-      }
 
       #api {
         margin-top: 4rem;
@@ -248,10 +244,12 @@
         const query = new URLSearchParams(window.location.search);
         const clientId = query.get('client_id');
 
-        const logo = document.getElementById('logo');
+        const logo = $('<img>', {
+          id: 'logo',
+          src: `https://www.missethoreca.nl/sites/${getKeyByValue(clientId) || 'vmntest'}/images/logo.svg`
+        });
 
-        logo.src = `https://www.missethoreca.nl/sites/${getKeyByValue(clientId) || 'vmntest'}/images/logo.svg`;
-        logo.classList.remove('hidden')
+        $('#panel').prepend(logo);
       });
     </script>
   </body>
