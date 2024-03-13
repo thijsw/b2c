@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-    <title>VMN Account</title>  
+    <title>VMN Account</title>
 
     <style>
       :root {
@@ -201,10 +201,52 @@
 
     <div id="wrapper">
       <div id="panel">
-        <img src="https://www.missethoreca.nl/sites/missethoreca/images/logo.svg" />
+        <img id="logo" src="https://www.missethoreca.nl/sites/missethoreca/images/logo.svg" />
 
         <div id="api" role="main"></div>
       </div>
     </div>
+    
+    <script type="text/javascript">
+      const client_ids = {
+        amt: 'eedb377a-61bf-418d-ae4d-bb94cd514183',
+        amweb: '215c7498-70da-4fd9-b69c-3a0bcff96073',
+        'arbo-online': '6054aec8-a2fa-4965-9e35-92bdd0e2ceba',
+        bakkerswereld: 'ac6ebf48-b124-47c2-b8dc-1bb6351c30c2',
+        'bike-eu': 'a55b0dac-3c55-44be-9d67-9c6fa46cbf84',
+        bouwmachines: 'bb02cf84-834a-485d-a611-799eb9c66e6c',
+        bouwwetten: '3ef6faa1-bd19-4228-bbce-5eebe7235872',
+        cmweb: '84dc5a1a-f69b-413e-932f-232e411164b9',
+        cobouw: '9fd550ed-d33e-40aa-a995-bce008d7252a',
+        dearchitect: 'f1176766-28d0-4c4a-8d4c-fec7510b31d0',
+        distrifood: '7316cb8b-20ee-4c6d-a6ff-de25d739084b',
+        facto: '83e4f8cc-6b81-41ae-a8fc-b79144b88198',
+        gawalo: 'bc630896-197e-4cb4-9f07-ddf7373db6e9',
+        installatiejournaal: '923383f1-271f-4bbe-b23b-c5207acd3c87',
+        koudeenluchtbehandeling: 'aff13b74-9195-4731-8e1c-1e00b46877b9',
+        logistiek: '1ebec82e-2463-40a1-b785-781bd2229f9c',
+        managementsupport: '4c8d429e-7219-4672-83a8-9b2c05e9fcf0',
+        missethoreca: '068d92d6-319e-471a-94c3-daa750a3ff36',
+        ornet: 'ce667d79-1f57-4f62-9eaa-306230967aaa',
+        pwnet: 'e54b7814-786c-4cfc-9f25-d8be4446a0b8',
+        salarisnet: '368610a7-6234-4a3d-b675-35eb53e228f9',
+        tweewieler: 'aa97882e-0690-4c3f-a4cd-51e7ab7480cb',
+        vakbladwarmtepompen: '59c9d8a8-2beb-4107-a461-eea1732f7ced',
+        vastgoedmarkt: '4cfa7883-de49-4bec-9f34-114adef66c5c',
+        vmntest: 'f6190ea1-c0fb-4c73-a0e7-686151732feb',
+        vmt: 'f5a690da-f5af-4710-9512-cef5b6fcc774'
+      }
+
+      const getKeyByValue = (value) => Object.keys(client_ids).find(key => client_ids[key] === value);
+
+      $(document).ready(function () {
+        const query = new URLSearchParams(window.location.search);
+        const clientId = query.get('client_id');
+
+        const logo = document.getElementById('logo');
+
+        logo.src = `https://www.missethoreca.nl/sites/${getKeyByValue(clientId) || 'vmntest'}/images/logo.svg`;
+      });
+    </script>
   </body>
 </html>
