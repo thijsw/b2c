@@ -93,6 +93,10 @@
         max-height: 5rem;
         width: 16rem;
       }
+    
+      #panel #logo.hidden {
+        display: none;
+      }
 
       #api {
         margin-top: 4rem;
@@ -202,7 +206,7 @@
 
     <div id="wrapper">
       <div id="panel">
-        <img id="logo" src="https://www.missethoreca.nl/sites/missethoreca/images/logo.svg" />
+        <img id="logo" class="hidden" src="https://www.missethoreca.nl/sites/missethoreca/images/logo.svg" />
 
         <div id="api" role="main"></div>
       </div>
@@ -247,6 +251,7 @@
         const logo = document.getElementById('logo');
 
         logo.src = `https://www.missethoreca.nl/sites/${getKeyByValue(clientId) || 'vmntest'}/images/logo.svg`;
+        logo.classList.remove('hidden')
       });
     </script>
   </body>
