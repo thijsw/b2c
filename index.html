@@ -47,7 +47,7 @@
       font-family: Inter, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
     }
 
-    input {
+    input[type="text"] {
       background-color: #f5f5f5;
       border: 1px solid #061426;
       border-radius: 0.6rem;
@@ -230,6 +230,33 @@
     #attributeVerification li.VerificationControl label,
     #attributeVerification a.helpLink {
       display: none;
+    }
+
+    #attributeVerification li.CheckboxMultiSelect {
+      margin-top: 2.5rem;
+    }
+
+    #attributeVerification li.CheckboxMultiSelect .attrEntry {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: repeat(3, auto);
+      column-gap: 1.7rem;
+      row-gap: 0.75rem;
+    }
+
+    #attributeVerification li.CheckboxMultiSelect .attrEntry div {
+      display: flex;
+      align-items: center;
+    }
+
+    #attributeVerification li.CheckboxMultiSelect .attrEntry input[type="checkbox"] {
+      grid-column: 1 / 2;
+    }
+
+    #attributeVerification li.CheckboxMultiSelect .attrEntry label {
+      grid-column: 2 / 3;
+      font-size: 1.5rem;
+      line-height: 2.4rem;
     }
   </style>
 </head>
