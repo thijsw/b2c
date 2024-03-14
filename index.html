@@ -1,257 +1,333 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-    <title>VMN Account</title>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
 
-    <style>
-      :root {
-        --dark-color: #061426;
-        --primary-color: #17509e;
-        --neutral-color-2: #f5f5f5;
-        --neutral-color-3: #dedede;
-      }
+  <title>VMN Account</title>
 
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-      }
+  <style>
+    :root {
+      --dark-color: #061426;
+      --primary-color: #17509e;
+      --neutral-color-2: #f5f5f5;
+      --neutral-color-3: #dedede;
+    }
 
-      html {
-        font-size: 62.5%;
-        -ms-text-size-adjust: none;
-        -webkit-text-size-adjust: none;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-      }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+    }
 
-      html,
-      body {
-        height: 100%;
-        font-family: Merriweather, serif;
-      }
+    html {
+      font-size: 62.5%;
+      -ms-text-size-adjust: none;
+      -webkit-text-size-adjust: none;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
 
-      h1, h2, h3 {
-        font-family: Inter, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-      }
+    html,
+    body {
+      height: 100%;
+      font-family: Merriweather, serif;
+    }
 
-      input {
-        background-color: #f5f5f5;
-        border: 1px solid #061426;
-        border-radius: 0.6rem;
-        color: #061426;
-        font-family: inherit;
-        font-size: 1.4rem;
-        height: 5.6rem;
-        line-height: 2.4rem;
-        outline: none;
-        padding: 0 1.6rem;
-        transition: background-color .3s ease;
-        width: 100%;
-      }
-      
-      a {
-        color: var(--dark-color);
-      }
-      
-      header {
-        display: flex;
-        justify-content: center;
-        height: 6.4rem;
-        padding: 1.6rem;
-      }
+    h1,
+    h2,
+    h3 {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    }
 
-      header svg {
-        max-height: 100%;
-      }
+    input {
+      background-color: #f5f5f5;
+      border: 1px solid #061426;
+      border-radius: 0.6rem;
+      color: #061426;
+      font-family: inherit;
+      font-size: 1.4rem;
+      height: 5.6rem;
+      line-height: 2.4rem;
+      outline: none;
+      padding: 0 1.6rem;
+      transition: background-color .3s ease;
+      width: 100%;
+    }
 
-      #wrapper {
-        align-items: start;
-        border-top: 1px solid var(--neutral-color-3);
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-      }
-      
-      #panel {
-        display: flex;
-        flex-direction: column;
-        margin: 5rem auto;
-        width: 36rem;
-      }
+    a {
+      color: var(--dark-color);
+    }
 
-      #panel > img {
-        margin: 0 auto;
-        max-height: 5rem;
-        width: 16rem;
-      }
+    #development {
+      align-items: center;
+      background-color: darkorange;
+      color: whitesmoke;
+      display: flex;
+      font-family: Inter, sans-serif;
+      height: 3.2rem;
+    }
 
-      #api {
-        margin-top: 4rem;
-      }
+    #development p {
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-align: center;
+      width: 100%;
+    }
 
-      h2 {
-        font-size: 2.2rem;
-        font-weight: 600;
-      }
+    #header {
+      display: flex;
+      justify-content: center;
+      height: 6.4rem;
+      padding: 1.6rem;
+    }
 
-      #localAccountForm .entry {
-        margin-top: 3rem;
-      }
-      
-      #localAccountForm .entry-item {
-        display: flex;
-        flex-direction: column;
-      }
+    #header svg {
+      max-height: 100%;
+    }
 
-      #localAccountForm .entry-item + .entry-item {
-        margin-top: 0.75rem;
-      }
+    #wrapper {
+      align-items: start;
+      border-top: 1px solid var(--neutral-color-3);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
 
-      #localAccountForm .entry-item .password-label,
-      #localAccountForm .entry-item label {
-        display: none;
-      }
+    #panel {
+      display: flex;
+      flex-direction: column;
+      margin: 5rem auto;
+      width: 36rem;
+    }
 
-      #localAccountForm .entry-item .error {
-        color: #c00;
-        font-size: 1.4rem;
-        margin-bottom: 2.5rem;
-      }
+    #panel>img {
+      margin: 0 auto;
+      max-height: 5rem;
+      width: 16rem;
+    }
 
-      #localAccountForm .buttons {
-        margin-top: 0.75rem;
-      }
+    #api {
+      margin-top: 4rem;
+    }
 
-      #attributeVerification #attributeList .buttons button,
-      button[form=localAccountForm] {
-        align-items: center;
-        background: var(--dark-color);
-        border: none;
-        padding: 1.6rem 2.4rem;
-        border-radius: 0.6rem;
-        color: #fff;
-        cursor: pointer;
-        display: flex;
-        font-weight: 600;
-        font-size: 1.4rem;
-        justify-content: center;
-        text-align: center;
-        text-decoration: none;
-        transition: width 0.3s;
-        width: 100%;
-      }
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
 
-      #forgotPassword {
-        display: block;
-        font-size: 1.6rem;
-        margin-top: 3rem;
-        text-align: center;
-      }
+    #localAccountForm .entry {
+      margin-top: 3rem;
+    }
 
-      #attributeVerification ul {
-        list-style-type: none;
-        padding: 0;
-      }
+    #localAccountForm .entry-item {
+      display: flex;
+      flex-direction: column;
+    }
 
-      #attributeVerification > .buttons {
-        display: flex;
-      }
+    #localAccountForm .entry-item+.entry-item {
+      margin-top: 0.75rem;
+    }
 
-      #attributeVerification > .buttons #continue {
-        display: none;
-      }
+    #localAccountForm .entry-item .password-label,
+    #localAccountForm .entry-item label {
+      display: none;
+    }
 
-      #attributeVerification > .buttons #cancel {
-        all: unset;
-        text-decoration: underline;
-        margin: 0 auto;
-        cursor: pointer;
-        font-family: Merriweather, serif;
-        font-size: 1.6rem;
-      }
+    #localAccountForm .entry-item .error {
+      color: #c00;
+      font-size: 1.4rem;
+      margin-bottom: 2.5rem;
+    }
 
-      #attributeVerification #attributeList + .buttons {
-        margin-top: 2.5rem;
-      }
-      
-      #attributeVerification .attrEntry .verificationControlContent .buttons {
-        margin-top: 0.75rem;
-      }
+    #localAccountForm .buttons {
+      margin-top: 0.75rem;
+    }
 
-      #api > .intro,
-      #attributeVerification .attrEntry label,
-      #attributeVerification a.helpLink {
-        display: none;
-      }
-    </style>
-  </head>
+    #attributeVerification #attributeList .buttons button,
+    button[form=localAccountForm] {
+      align-items: center;
+      background: var(--dark-color);
+      border: none;
+      padding: 1.6rem 2.4rem;
+      border-radius: 0.6rem;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      font-weight: 600;
+      font-size: 1.4rem;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      transition: width 0.3s;
+      width: 100%;
+    }
 
-  <body>
-    <header>
-      <svg viewBox="0 0 135.129 47.614" xmlns="http://www.w3.org/2000/svg"><defs><clipPath clipPathUnits="userSpaceOnUse" id="a"><path d="M0 0h841.89v595.276H0Z"/></clipPath><clipPath clipPathUnits="userSpaceOnUse" id="b"><path d="M0 0h841.89v595.276H0Z"/></clipPath></defs><g clip-path="url(#a)" transform="matrix(.35278 0 0 -.35278 -103.474 133.552)"><path d="m0 0-17.292-40.045L-34.078 0h-13.147l23.158-54h13.045L12.136 0Zm88.179.607c-8.595 0-15.876-3.438-20.224-9-3.742 6.067-10.315 9-18.202 9-7.382 0-13.652-2.629-17.697-7.483V0H20.022v-54h12.641v27.404c0 10.719 5.663 16.18 14.056 16.18 7.685 0 12.135-4.652 12.135-14.258V-54h12.64v27.404c0 10.719 5.764 16.18 14.056 16.18 7.686 0 12.135-4.652 12.135-14.258V-54h12.64v30.944c0 16.281-9.101 23.663-22.146 23.663m63.91 0c-7.887 0-14.46-2.629-18.605-7.585V0h-12.035v-54h12.64v27.303c0 10.821 6.068 16.281 15.068 16.281 8.089 0 12.842-4.651 12.842-14.258V-54h12.641v30.944c0 16.281-9.607 23.663-22.551 23.663" style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(501.715 351.424)"/><path d="M0 0a6.3 6.3 0 0 1-5.055-2.249C-5.991-.733-7.633 0-9.604 0a5.59 5.59 0 0 1-4.423-1.872v1.719h-3.008v-13.495h3.159v6.849c0 2.679 1.416 4.044 3.513 4.044 1.919 0 3.033-1.163 3.033-3.564v-7.329h3.16v6.849c0 2.679 1.44 4.044 3.513 4.044 1.919 0 3.033-1.163 3.033-3.564v-7.329h3.159v7.734C5.535-1.845 3.26 0 0 0" style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(616.435 284.083)"/><path d="M0 0c-4.019 0-6.974-2.881-6.974-6.9s2.93-6.925 7.454-6.925c2.325 0 4.221.758 5.434 2.2L4.221-9.68a4.834 4.834 0 0 0-3.665-1.466c-2.351 0-3.993 1.264-4.373 3.235H6.774c.025.303.05.683.05.935v.002C6.824-2.753 3.943 0 0 0m-3.842-5.813A3.731 3.731 0 0 0 0-2.527a3.674 3.674 0 0 0 3.816-3.286z" style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(631.692 284.083)"/><path d="M0 0a5.529 5.529 0 0 1-4.347 1.82c-3.918 0-6.824-2.705-6.824-6.9 0-4.196 2.906-6.927 6.824-6.927a5.563 5.563 0 0 1 4.473 1.919v-1.739h3.033V6.927H0Zm-3.968-9.299c-2.275 0-4.019 1.643-4.019 4.221 0 2.578 1.744 4.221 4.019 4.221C-1.693-.857.051-2.5.051-5.078c0-2.578-1.744-4.221-4.019-4.221" style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(651.609 282.261)"/><path d="M0 0a1.94 1.94 0 0 1 2.021 1.855A1.881 1.881 0 0 1 .086 3.796L0 3.791a1.925 1.925 0 0 1-2.022-1.895A1.925 1.925 0 0 1-.071-.002L0 0" style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(659.73 286.155)"/></g><path d="M0 0h3.161v13.497H.002Z" style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(.35278 0 0 -.35278 128.703 38.148)"/><g clip-path="url(#b)" transform="matrix(.35278 0 0 -.35278 -103.474 133.552)"><path d="M0 0c-2.174 0-4.271-.556-5.71-1.668l1.238-2.3A6.683 6.683 0 0 0-.377-2.629c2.249 0 3.361-1.086 3.361-2.931v-.203H-.504c-4.094 0-5.611-1.769-5.611-4.018 0-2.351 1.947-4.044 5.03-4.044 2.022 0 3.488.655 4.246 1.82v-1.643h2.983v7.91C6.142-1.845 3.892 0 0 0m2.982-9.425c-.53-1.392-1.87-2.1-3.412-2.1-1.617 0-2.578.733-2.578 1.872 0 .986.582 1.795 2.73 1.795h3.26z" style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(670.211 284.083)"/><path d="M0 0c-.978 8.922 1.931 17.15 6.795 24.669C14.962 37.295 28.64 47.92 38.666 56.454c2.09 1.779 4.184 3.447 6.287 4.959a60.497 60.497 0 0 1-19.349-5.133C7.345 48.237-7.575 33.253-14.651 15.221c-4.356-11.099-5.675-24.078.333-34.451 2.605-4.497 6.431-8.24 10.5-11.601C7.737-40.378 22.4-47.915 37.643-51.341c-3.348 2.865-6.593 5.859-9.879 8.712C15.049-31.592 1.92-17.516 0 0" style="fill:#e8127a;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(311.691 309.21)"/><path d="M0 0c-.385 2.945-1.58 5.719-2.865 8.398-10.399 21.685-27.364 41.541-46.16 56.392-13.459 10.635-25.561 7.159-37.37-1.332 12.774 1.071 25.142-2.685 36.723-11.778 12.466-9.787 20.613-24.227 23.263-39.439 3.074-17.65 1.216-41.301-14.612-52.689-15.529-11.174-34.515-12.932-52.683-8.848 4.89-4.184 10.002-8.091 15.805-10.864 12.414-5.931 21.852-3.748 32.874 3.789a183.863 183.863 0 0 1 30.517 26.207C-7.253-22.4 1.492-11.432 0 0" style="fill:#179ecf;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(443.038 307.165)"/><path d="M0 0c15.827 11.388 17.686 35.039 14.611 52.689C11.961 67.901 3.815 82.34-8.652 92.128c-11.577 9.093-23.948 12.849-36.722 11.778-2.103-1.512-4.197-3.18-6.287-4.959-10.026-8.534-23.704-19.159-31.871-31.785-4.863-7.516-7.773-15.747-6.795-24.669C-88.407 24.977-75.278 10.9-62.563-.136c3.286-2.854 6.531-5.847 9.879-8.712C-34.517-12.932-15.529-11.174 0 0" style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(402.017 266.717)"/></g></svg>
-    </header>
+    #forgotPassword {
+      display: block;
+      font-size: 1.6rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
 
-    <div id="wrapper">
-      <div id="panel">
-        <!-- jQuery will add logo here -->
-        <!-- <img id="logo" src /> -->
+    #attributeVerification ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-        <div id="api" role="main"></div>
-      </div>
+    #attributeVerification>.buttons {
+      display: flex;
+    }
+
+    #attributeVerification>.buttons #continue {
+      display: none;
+    }
+
+    #attributeVerification>.buttons #cancel {
+      all: unset;
+      text-decoration: underline;
+      margin: 0 auto;
+      cursor: pointer;
+      font-family: Merriweather, serif;
+      font-size: 1.6rem;
+    }
+
+    #attributeVerification #attributeList+.buttons {
+      margin-top: 2.5rem;
+    }
+
+    #attributeVerification .attrEntry .verificationControlContent .buttons {
+      margin-top: 0.75rem;
+    }
+
+    #api>.intro,
+    #attributeVerification .attrEntry label,
+    #attributeVerification a.helpLink {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="development" style="display: none;">
+    <p>You are viewing the test environment</p>
+  </header>
+
+  <header id="header">
+    <svg viewBox="0 0 135.129 47.614" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath clipPathUnits="userSpaceOnUse" id="a">
+          <path d="M0 0h841.89v595.276H0Z" />
+        </clipPath>
+        <clipPath clipPathUnits="userSpaceOnUse" id="b">
+          <path d="M0 0h841.89v595.276H0Z" />
+        </clipPath>
+      </defs>
+      <g clip-path="url(#a)" transform="matrix(.35278 0 0 -.35278 -103.474 133.552)">
+        <path
+          d="m0 0-17.292-40.045L-34.078 0h-13.147l23.158-54h13.045L12.136 0Zm88.179.607c-8.595 0-15.876-3.438-20.224-9-3.742 6.067-10.315 9-18.202 9-7.382 0-13.652-2.629-17.697-7.483V0H20.022v-54h12.641v27.404c0 10.719 5.663 16.18 14.056 16.18 7.685 0 12.135-4.652 12.135-14.258V-54h12.64v27.404c0 10.719 5.764 16.18 14.056 16.18 7.686 0 12.135-4.652 12.135-14.258V-54h12.64v30.944c0 16.281-9.101 23.663-22.146 23.663m63.91 0c-7.887 0-14.46-2.629-18.605-7.585V0h-12.035v-54h12.64v27.303c0 10.821 6.068 16.281 15.068 16.281 8.089 0 12.842-4.651 12.842-14.258V-54h12.641v30.944c0 16.281-9.607 23.663-22.551 23.663"
+          style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(501.715 351.424)" />
+        <path
+          d="M0 0a6.3 6.3 0 0 1-5.055-2.249C-5.991-.733-7.633 0-9.604 0a5.59 5.59 0 0 1-4.423-1.872v1.719h-3.008v-13.495h3.159v6.849c0 2.679 1.416 4.044 3.513 4.044 1.919 0 3.033-1.163 3.033-3.564v-7.329h3.16v6.849c0 2.679 1.44 4.044 3.513 4.044 1.919 0 3.033-1.163 3.033-3.564v-7.329h3.159v7.734C5.535-1.845 3.26 0 0 0"
+          style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(616.435 284.083)" />
+        <path
+          d="M0 0c-4.019 0-6.974-2.881-6.974-6.9s2.93-6.925 7.454-6.925c2.325 0 4.221.758 5.434 2.2L4.221-9.68a4.834 4.834 0 0 0-3.665-1.466c-2.351 0-3.993 1.264-4.373 3.235H6.774c.025.303.05.683.05.935v.002C6.824-2.753 3.943 0 0 0m-3.842-5.813A3.731 3.731 0 0 0 0-2.527a3.674 3.674 0 0 0 3.816-3.286z"
+          style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(631.692 284.083)" />
+        <path
+          d="M0 0a5.529 5.529 0 0 1-4.347 1.82c-3.918 0-6.824-2.705-6.824-6.9 0-4.196 2.906-6.927 6.824-6.927a5.563 5.563 0 0 1 4.473 1.919v-1.739h3.033V6.927H0Zm-3.968-9.299c-2.275 0-4.019 1.643-4.019 4.221 0 2.578 1.744 4.221 4.019 4.221C-1.693-.857.051-2.5.051-5.078c0-2.578-1.744-4.221-4.019-4.221"
+          style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(651.609 282.261)" />
+        <path
+          d="M0 0a1.94 1.94 0 0 1 2.021 1.855A1.881 1.881 0 0 1 .086 3.796L0 3.791a1.925 1.925 0 0 1-2.022-1.895A1.925 1.925 0 0 1-.071-.002L0 0"
+          style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(659.73 286.155)" />
+      </g>
+      <path d="M0 0h3.161v13.497H.002Z" style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none"
+        transform="matrix(.35278 0 0 -.35278 128.703 38.148)" />
+      <g clip-path="url(#b)" transform="matrix(.35278 0 0 -.35278 -103.474 133.552)">
+        <path
+          d="M0 0c-2.174 0-4.271-.556-5.71-1.668l1.238-2.3A6.683 6.683 0 0 0-.377-2.629c2.249 0 3.361-1.086 3.361-2.931v-.203H-.504c-4.094 0-5.611-1.769-5.611-4.018 0-2.351 1.947-4.044 5.03-4.044 2.022 0 3.488.655 4.246 1.82v-1.643h2.983v7.91C6.142-1.845 3.892 0 0 0m2.982-9.425c-.53-1.392-1.87-2.1-3.412-2.1-1.617 0-2.578.733-2.578 1.872 0 .986.582 1.795 2.73 1.795h3.26z"
+          style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(670.211 284.083)" />
+        <path
+          d="M0 0c-.978 8.922 1.931 17.15 6.795 24.669C14.962 37.295 28.64 47.92 38.666 56.454c2.09 1.779 4.184 3.447 6.287 4.959a60.497 60.497 0 0 1-19.349-5.133C7.345 48.237-7.575 33.253-14.651 15.221c-4.356-11.099-5.675-24.078.333-34.451 2.605-4.497 6.431-8.24 10.5-11.601C7.737-40.378 22.4-47.915 37.643-51.341c-3.348 2.865-6.593 5.859-9.879 8.712C15.049-31.592 1.92-17.516 0 0"
+          style="fill:#e8127a;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(311.691 309.21)" />
+        <path
+          d="M0 0c-.385 2.945-1.58 5.719-2.865 8.398-10.399 21.685-27.364 41.541-46.16 56.392-13.459 10.635-25.561 7.159-37.37-1.332 12.774 1.071 25.142-2.685 36.723-11.778 12.466-9.787 20.613-24.227 23.263-39.439 3.074-17.65 1.216-41.301-14.612-52.689-15.529-11.174-34.515-12.932-52.683-8.848 4.89-4.184 10.002-8.091 15.805-10.864 12.414-5.931 21.852-3.748 32.874 3.789a183.863 183.863 0 0 1 30.517 26.207C-7.253-22.4 1.492-11.432 0 0"
+          style="fill:#179ecf;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(443.038 307.165)" />
+        <path
+          d="M0 0c15.827 11.388 17.686 35.039 14.611 52.689C11.961 67.901 3.815 82.34-8.652 92.128c-11.577 9.093-23.948 12.849-36.722 11.778-2.103-1.512-4.197-3.18-6.287-4.959-10.026-8.534-23.704-19.159-31.871-31.785-4.863-7.516-7.773-15.747-6.795-24.669C-88.407 24.977-75.278 10.9-62.563-.136c3.286-2.854 6.531-5.847 9.879-8.712C-34.517-12.932-15.529-11.174 0 0"
+          style="fill:#140a61;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(402.017 266.717)" />
+      </g>
+    </svg>
+  </header>
+
+  <div id="wrapper">
+    <div id="panel">
+      <!-- jQuery will add logo here -->
+      <!-- <img id="logo" src /> -->
+
+      <div id="api" role="main"></div>
     </div>
-    
-    <script type="text/javascript">
-      const client_ids = {
-        amt: 'eedb377a-61bf-418d-ae4d-bb94cd514183',
-        amweb: '215c7498-70da-4fd9-b69c-3a0bcff96073',
-        'arbo-online': '6054aec8-a2fa-4965-9e35-92bdd0e2ceba',
-        bakkerswereld: 'ac6ebf48-b124-47c2-b8dc-1bb6351c30c2',
-        'bike-eu': 'a55b0dac-3c55-44be-9d67-9c6fa46cbf84',
-        bouwmachines: 'bb02cf84-834a-485d-a611-799eb9c66e6c',
-        bouwwetten: '3ef6faa1-bd19-4228-bbce-5eebe7235872',
-        cmweb: '84dc5a1a-f69b-413e-932f-232e411164b9',
-        cobouw: '9fd550ed-d33e-40aa-a995-bce008d7252a',
-        dearchitect: 'f1176766-28d0-4c4a-8d4c-fec7510b31d0',
-        distrifood: '7316cb8b-20ee-4c6d-a6ff-de25d739084b',
-        facto: '83e4f8cc-6b81-41ae-a8fc-b79144b88198',
-        gawalo: 'bc630896-197e-4cb4-9f07-ddf7373db6e9',
-        installatiejournaal: '923383f1-271f-4bbe-b23b-c5207acd3c87',
-        koudeenluchtbehandeling: 'aff13b74-9195-4731-8e1c-1e00b46877b9',
-        logistiek: '1ebec82e-2463-40a1-b785-781bd2229f9c',
-        managementsupport: '4c8d429e-7219-4672-83a8-9b2c05e9fcf0',
-        missethoreca: '068d92d6-319e-471a-94c3-daa750a3ff36',
-        ornet: 'ce667d79-1f57-4f62-9eaa-306230967aaa',
-        pwnet: 'e54b7814-786c-4cfc-9f25-d8be4446a0b8',
-        salarisnet: '368610a7-6234-4a3d-b675-35eb53e228f9',
-        tweewieler: 'aa97882e-0690-4c3f-a4cd-51e7ab7480cb',
-        vakbladwarmtepompen: '59c9d8a8-2beb-4107-a461-eea1732f7ced',
-        vastgoedmarkt: '4cfa7883-de49-4bec-9f34-114adef66c5c',
-        vmntest: 'f6190ea1-c0fb-4c73-a0e7-686151732feb',
-        vmt: 'f5a690da-f5af-4710-9512-cef5b6fcc774'
-      }
+  </div>
 
-      const getKeyByValue = (value) => Object.keys(client_ids).find(key => client_ids[key] === value);
+  <script type="text/javascript">
+    const client_ids = {
+      amt: 'eedb377a-61bf-418d-ae4d-bb94cd514183',
+      amweb: '215c7498-70da-4fd9-b69c-3a0bcff96073',
+      'arbo-online': '6054aec8-a2fa-4965-9e35-92bdd0e2ceba',
+      bakkerswereld: 'ac6ebf48-b124-47c2-b8dc-1bb6351c30c2',
+      'bike-eu': 'a55b0dac-3c55-44be-9d67-9c6fa46cbf84',
+      bouwmachines: 'bb02cf84-834a-485d-a611-799eb9c66e6c',
+      bouwwetten: '3ef6faa1-bd19-4228-bbce-5eebe7235872',
+      cmweb: '84dc5a1a-f69b-413e-932f-232e411164b9',
+      cobouw: '9fd550ed-d33e-40aa-a995-bce008d7252a',
+      dearchitect: 'f1176766-28d0-4c4a-8d4c-fec7510b31d0',
+      distrifood: '7316cb8b-20ee-4c6d-a6ff-de25d739084b',
+      facto: '83e4f8cc-6b81-41ae-a8fc-b79144b88198',
+      gawalo: 'bc630896-197e-4cb4-9f07-ddf7373db6e9',
+      installatiejournaal: '923383f1-271f-4bbe-b23b-c5207acd3c87',
+      koudeenluchtbehandeling: 'aff13b74-9195-4731-8e1c-1e00b46877b9',
+      logistiek: '1ebec82e-2463-40a1-b785-781bd2229f9c',
+      managementsupport: '4c8d429e-7219-4672-83a8-9b2c05e9fcf0',
+      missethoreca: '068d92d6-319e-471a-94c3-daa750a3ff36',
+      ornet: 'ce667d79-1f57-4f62-9eaa-306230967aaa',
+      pwnet: 'e54b7814-786c-4cfc-9f25-d8be4446a0b8',
+      salarisnet: '368610a7-6234-4a3d-b675-35eb53e228f9',
+      tweewieler: 'aa97882e-0690-4c3f-a4cd-51e7ab7480cb',
+      vakbladwarmtepompen: '59c9d8a8-2beb-4107-a461-eea1732f7ced',
+      vastgoedmarkt: '4cfa7883-de49-4bec-9f34-114adef66c5c',
+      vmntest: 'f6190ea1-c0fb-4c73-a0e7-686151732feb',
+      vmt: 'f5a690da-f5af-4710-9512-cef5b6fcc774'
+    }
 
-      $(document).ready(function () {
-        const query = new URLSearchParams(window.location.search);
-        const clientId = query.get('client_id');
+    const getKeyByValue = (value) => Object.keys(client_ids).find(key => client_ids[key] === value);
 
-        const logo = $('<img>', {
-          id: 'logo',
-          src: `https://www.missethoreca.nl/sites/${getKeyByValue(clientId) || 'vmntest'}/images/logo.svg`
-        });
+    const isDevelopment = () => 
+      window.location.pathname.split(/\//)
+        .some((segment) => /^b2c.*_dev$|^b2c.*_test$|^b2c.*_beta$/i.test(segment))
 
-        $('#panel').prepend(logo);
+    $(document).ready(function () {
+      const query = new URLSearchParams(window.location.search);
+      const clientId = query.get('client_id');
+
+      const logo = $('<img>', {
+        id: 'logo',
+        src: `https://www.missethoreca.nl/sites/${getKeyByValue(clientId) || 'vmntest'}/images/logo.svg`
       });
-    </script>
-  </body>
+
+      $('#panel').prepend(logo);
+
+      if (isDevelopment()) {
+        $('#development').show();
+      }
+    });
+  </script>
+</body>
+
 </html>
